@@ -1,0 +1,28 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: APIGateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: BookService
+            uri: http://god:9001
+            predicates:
+            - Path=/api/v1/books/**
+          - id: EmployeeService
+            uri: http://god:9010
+            predicates:
+            - Path=/api/v1/employees/**
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        cors-configurations:
+        '[/**]':
+          allowedOrigins: "*"
+          allowedMethods: "*"
+          allowedHeaders: "*"
+
+
