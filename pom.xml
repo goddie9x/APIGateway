@@ -11,9 +11,9 @@
 	</parent>
 	<groupId>com.librarymanager</groupId>
 	<artifactId>APIGateway</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>APIGateway</name>
-	<description>Demo project for Spring Boot</description>
+	<description>APIGateway for librarymanager</description>
 	<url/>
 	<licenses>
 		<license/>
