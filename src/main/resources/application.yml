@@ -9,15 +9,15 @@ spring:
       mvc:
         routes:
           - id: BookService
-            uri: http://god:9001
+            uri: http://book-service:9001
             predicates:
             - Path=/api/v1/books/**
           - id: EmployeeService
-            uri: http://god:9010
+            uri: http://employee-service:9010
             predicates:
             - Path=/api/v1/employees/**
           - id: BorrowingService
-            uri: http://god:9020
+            uri: http://borrowing-service:9020
             predicates:
             - Path=/api/v1/borrowings/**
 
